@@ -1,0 +1,29 @@
+header {
+    background: var(--base-color);
+    height: 300px;
+    text-align: center;
+
+img {
+    margin-top: 200px;
+    object-fit: contain;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+
+}
+
+h2 {
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: var(--dark-text-color);
+
+}
+
+p {
+    max-width: 450px;
+    margin-inline: auto;
+    color: var(--light-text-color);
+}
+
+}
