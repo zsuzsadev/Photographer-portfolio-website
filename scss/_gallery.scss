@@ -1,48 +1,61 @@
 
+* {
+  box-sizing: border-box;
+}
 
-.image-gallery {
-    
-    display: flex;
-    flex-direction: column;
-    max-width: 1400px;
-    text-align:center;
-    margin-inline: auto;
+
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 20px;
+  margin-top: 170px;
+
+  @media screen and (max-width: 600px) {
     margin-top: 190px;
-    gap: 3px;
-    padding-inline: 30px;
 
-    @media only screen and (min-width: 700px) {
+  }
+
+  @media screen and (max-width: 700px) {
+    margin-top: 195px;
+  }
+
+
+}
+
+.column {
+  flex: 25%;
+  max-width:25%;
+  padding: 0 4px;
+  overflow: hidden;
+  max-height: 1300px;
   
-        flex-direction: row;
-        margin-top: 170px;
-      
 
+  img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
   }
 }
-  
-  .image-gallery .column {
-    display: flex;
-    flex-direction: column;
-    
-    @media only screen and (min-width: 700px) {
-      display: flex;
-      overflow: hidden;
-      vertical-align: middle;
 
-    }
-    
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+    max-height:fit-content !important;
   }
-  
-  .image-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-
-    @media only screen and (min-width: 700px) {
-    }
-
-  }
-
-
-  
-  
+}

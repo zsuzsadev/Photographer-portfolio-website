@@ -5,6 +5,7 @@ body{
  .navigation {
      height: 55px;
      background:var(--base-color);
+
 }
  .name {
      position: absolute;
@@ -52,9 +53,7 @@ body{
      color: #eeeeee;
 
 }
- .navbar-dropdown li a{
-     background: #2581DC;
-}
+
  nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
      padding-left: 4px;
      content: ' \025BE';
@@ -82,10 +81,12 @@ body{
      background: transparent;
      height: 55px;
      width: 70px;
+   
 }
  @media only screen and (max-width: 700px) {
      .nav-mobile {
          display: block;
+
     }
      nav {
          width: 100%;
@@ -93,6 +94,9 @@ body{
     }
      nav ul {
          display: none;
+         position: absolute;
+         width: 100%;
+         text-align: center;
     }
      nav ul li {
          float: none;
@@ -101,16 +105,17 @@ body{
          padding: 15px;
          line-height: 20px;
          background: #262626;
+         position: relative; /* fontos*/
+         width: 100% !important;
     }
-     nav ul li ul li a {
-         padding-left: 30px;
-    }
+   
      .navbar-dropdown {
          position: static;
 }
  @media screen and (min-width:700px) {
      .nav-list {
          display: block !important;
+         width: 100% !important;
     }
 }
  #navbar-toggle {

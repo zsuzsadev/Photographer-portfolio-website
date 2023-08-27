@@ -76,10 +76,6 @@ nav ul li a:hover, nav ul li a:visited:hover {
   color: #eeeeee;
 }
 
-.navbar-dropdown li a {
-  background: #2581DC;
-}
-
 nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
   padding-left: 4px;
   content: " ▾";
@@ -122,6 +118,9 @@ nav ul li ul li a {
   }
   nav ul {
     display: none;
+    position: absolute;
+    width: 100%;
+    text-align: center;
   }
   nav ul li {
     float: none;
@@ -130,9 +129,8 @@ nav ul li ul li a {
     padding: 15px;
     line-height: 20px;
     background: #262626;
-  }
-  nav ul li ul li a {
-    padding-left: 30px;
+    position: relative; /* fontos*/
+    width: 100% !important;
   }
   .navbar-dropdown {
     position: static;
@@ -141,6 +139,7 @@ nav ul li ul li a {
 @media only screen and (max-width: 700px) and (min-width: 700px) {
   .nav-list {
     display: block !important;
+    width: 100% !important;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -233,40 +232,58 @@ hr {
   border-top: 1px solid var(--light-text-color);
 }
 
-.image-gallery {
+* {
+  box-sizing: border-box;
+}
+
+.gallery {
   display: flex;
-  flex-direction: column;
-  max-width: 1400px;
-  text-align: center;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  max-width: 1200px;
   margin-inline: auto;
-  margin-top: 190px;
-  gap: 3px;
-  padding-inline: 30px;
+  padding-inline: 20px;
+  margin-top: 170px;
 }
-@media only screen and (min-width: 700px) {
-  .image-gallery {
-    flex-direction: row;
-    margin-top: 170px;
+@media screen and (max-width: 600px) {
+  .gallery {
+    margin-top: 190px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .gallery {
+    margin-top: 195px;
   }
 }
 
-.image-gallery .column {
-  display: flex;
-  flex-direction: column;
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  overflow: hidden;
+  max-height: 1300px;
 }
-@media only screen and (min-width: 700px) {
-  .image-gallery .column {
-    display: flex;
-    overflow: hidden;
-    vertical-align: middle;
-  }
-}
-
-.image-item img {
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
   width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  flex-grow: 1;
+  display: flex;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+    max-height: -moz-fit-content !important;
+    max-height: fit-content !important;
+  }
 }
 html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
