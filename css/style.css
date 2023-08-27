@@ -236,11 +236,11 @@ hr {
 .image-gallery {
   display: flex;
   flex-direction: column;
-  gap: 4px;
   max-width: 1400px;
   text-align: center;
   margin-inline: auto;
   margin-top: 190px;
+  gap: 3px;
   padding-inline: 30px;
 }
 @media only screen and (min-width: 700px) {
@@ -253,7 +253,13 @@ hr {
 .image-gallery .column {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+}
+@media only screen and (min-width: 700px) {
+  .image-gallery .column {
+    display: flex;
+    overflow: hidden;
+    vertical-align: middle;
+  }
 }
 
 .image-item img {
@@ -262,7 +268,6 @@ hr {
   -o-object-fit: contain;
      object-fit: contain;
 }
-
 html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
