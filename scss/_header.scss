@@ -1,14 +1,22 @@
 header {
     background: var(--base-color);
-    height: 300px;
+    height: 280px;
     text-align: center;
 
+    @media screen and (max-width:700px) {
+        height: 120px;
+    }
+
 img {
-    margin-top: 200px;
+    margin-top: 180px;
     object-fit: contain;
     height: 150px;
     width: 150px;
     border-radius: 50%;
+
+    @media screen and (max-width:700px) {
+        margin-top: 30px;
+    }
 
 }
 
@@ -21,9 +29,21 @@ h2 {
 }
 
 p {
+    padding-inline: 10px;
     max-width: 450px;
     margin-inline: auto;
     color: var(--light-text-color);
 }
 
 }
+
+hr { 
+    overflow: hidden;
+     display: block;
+     max-width: 250px;
+     height: 2px;
+     border: 0;
+     margin-top: 15px;
+     border-top: 1px solid var(--light-text-color);
+ }
+
