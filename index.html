@@ -42,56 +42,138 @@
 <hr>
       </header>
 
-     
-  
-
-
 
 <div class="gallery"> 
   <div class="column">
-    <img src="./images/placeholder1.jpg" style="width:100%">
-    <img src="./images/placeholder2.jpg" style="width:100%">
-    <img src="./images/placeholder3.jpg" style="width:100%">
-    <img src="./images/placeholder4.jpg" style="width:100%">
-    <img src="./images/placeholder5.jpg" style="width:100%">
-    <img src="./images/placeholder6.jpg" style="width:100%">
-    <img src="./images/placeholder7.jpg" style="width:100%">
+  <div class="col">
+    <img src="./images/placeholder1.jpg" onclick="openLightbox();toSlide(1)" class="hover-shadow preview">
+  </div>
+  <div class="col">
+    <img src="./images/placeholder2.jpg" onclick="openLightbox();toSlide(2)" class="hover-shadow preview">
+  </div>    
+  <div class="col">
+    <img src="./images/placeholder3.jpg" onclick="openLightbox();toSlide(3)" class="hover-shadow preview">
+  </div>     <div class="col">
+    <img src="./images/placeholder4.jpg"  onclick="openLightbox();toSlide(4)" class="hover-shadow preview">
+  </div>     <div class="col">
+    <img src="./images/placeholder5.jpg" onclick="openLightbox();toSlide(5)" class="hover-shadow preview">
+  </div>     <div class="col">
+    <img src="./images/placeholder6.jpg" onclick="openLightbox();toSlide(6)" class="hover-shadow preview">
+  </div>   
+  <div class="col">
+    <img src="./images/placeholder7.jpg" onclick="openLightbox();toSlide(7)" class="hover-shadow preview">
+  </div>   
   </div>
   <div class="column">
-    <img src="./images/placeholder8.jpg" style="width:100%">
-    <img src="./images/placeholder9.jpg" style="width:100%">
-    <img src="./images/placeholder10.jpg" style="width:100%">
-    <img src="./images/placeholder11.jpg" style="width:100%">
-    <img src="./images/placeholder12.jpg" style="width:100%">
-    <img src="./images/placeholder13.jpg" style="width:100%">
-  </div>  
-  <div class="column">
-    <img src="./images/placeholder14.jpg" style="width:100%">
-    <img src="./images/placeholder15.jpg" style="width:100%">
-    <img src="./images/placeholder1.jpg" style="width:100%">
-    <img src="./images/placeholder2.jpg" style="width:100%">
-    <img src="./images/placeholder3.jpg" style="width:100%">
-    <img src="./images/placeholder4.jpg" style="width:100%">
-    <img src="./images/placeholder5.jpg" style="width:100%">
+    <div class="col">
+      <img src="./images/placeholder8.jpg" onclick="openLightbox();toSlide(8)" class="hover-shadow preview">
+    </div>
+    <div class="col">
+      <img src="./images/placeholder9.jpg" onclick="openLightbox();toSlide(9)" class="hover-shadow preview">
+    </div>    
+    <div class="col">
+      <img src="./images/placeholder10.jpg" onclick="openLightbox();toSlide(10)" class="hover-shadow preview">
+    </div>     <div class="col">
+      <img src="./images/placeholder11.jpg"  onclick="openLightbox();toSlide(11)" class="hover-shadow preview">
+    </div>     <div class="col">
+      <img src="./images/placeholder12.jpg" onclick="openLightbox();toSlide(12)" class="hover-shadow preview">
+    </div>     <div class="col">
+      <img src="./images/placeholder13.jpg" onclick="openLightbox();toSlide(13)" class="hover-shadow preview">
+    </div>   
   </div>
 
   <div class="column">
-    <img src="./images/placeholder8.jpg" style="width:100%">
-    <img src="./images/placeholder9.jpg" style="width:100%">
-    <img src="./images/placeholder10.jpg" style="width:100%">
-    <img src="./images/placeholder11.jpg" style="width:100%">
-    <img src="./images/placeholder12.jpg" style="width:100%">
-    <img src="./images/placeholder13.jpg" style="width:100%">
+    <div class="col">
+      <img src="./images/placeholder14.jpg" onclick="openLightbox();toSlide(14)" class="hover-shadow preview">
+    </div>
+    <div class="col">
+      <img src="./images/placeholder15.jpg" onclick="openLightbox();toSlide(15)" class="hover-shadow preview">
+    </div>    
+    <div class="col">
+      <img src="./images/placeholder1.jpg" onclick="openLightbox();toSlide(1)" class="hover-shadow preview">
+    </div>     <div class="col">
+      <img src="./images/placeholder2.jpg"  onclick="openLightbox();toSlide(2)" class="hover-shadow preview">
+    </div>     <div class="col">
+      <img src="./images/placeholder3.jpg" onclick="openLightbox();toSlide(3)" class="hover-shadow preview">
+    </div>     <div class="col">
+      <img src="./images/placeholder4.jpg" onclick="openLightbox();toSlide(4)" class="hover-shadow preview">
+    </div> 
+   <div class="col">
+    <img src="./images/placeholder5.jpg" onclick="openLightbox();toSlide(5)" class="hover-shadow preview">
+  </div> 
+  </div>
+
+  <div class="column">
+    <div class="col">
+      <img src="./images/placeholder8.jpg" onclick="openLightbox();toSlide(8)" class="hover-shadow preview">
+    </div>
+    <div class="col">
+      <img src="./images/placeholder9.jpg" onclick="openLightbox();toSlide(9)" class="hover-shadow preview">
+    </div>    
+    <div class="col">
+      <img src="./images/placeholder10.jpg" onclick="openLightbox();toSlide(10)" class="hover-shadow preview">
+    </div>     <div class="col">
+      <img src="./images/placeholder11.jpg"  onclick="openLightbox();toSlide(11)" class="hover-shadow preview">
+    </div>     <div class="col">
+      <img src="./images/placeholder12.jpg" onclick="openLightbox();toSlide(12)" class="hover-shadow preview">
+    </div>     <div class="col">
+      <img src="./images/placeholder13.jpg" onclick="openLightbox();toSlide(13)" class="hover-shadow preview">
+    </div>   
   </div>  
-  
 </div>
+
+
+<div id="Lightbox" class="modal">
+
+  <span class="close pointer" onclick="closeLightbox()">&times;</span>
+  <div class="modal-content">
+   <div class="slide">
+    <img src="./images/placeholder1.jpg" class="image-slide" alt="" />
+   </div>
+   <div class="slide">
+    <img src="./images/placeholder2.jpg" class="image-slide" alt="" />
+   </div>
+   <div class="slide">
+    <img src="./images/placeholder3.jpg" class="image-slide" alt="" />
+   </div>
+   <div class="slide">
+    <img src="./images/placeholder4.jpg" class="image-slide" alt="" />
+   </div>
+   <div class="slide">
+    <img src="./images/placeholder5.jpg" class="image-slide" alt="" />
+   </div>
+   <div class="slide">
+    <img src="./images/placeholder6.jpg" class="image-slide" alt="" />
+   </div>
+   <div class="slide">
+    <img src="./images/placeholder7.jpg" class="image-slide" alt="" />
+   </div>
+   <div class="slide">
+    <img src="./images/placeholder8.jpg" class="image-slide" alt="" />
+   </div>
+   <div class="slide">
+    <img src="./images/placeholder9.jpg" class="image-slide" alt="" />
+   </div> <div class="slide">
+    <img src="./images/placeholder10.jpg" class="image-slide" alt="" />
+   </div> <div class="slide">
+    <img src="./images/placeholder11.jpg" class="image-slide" alt="" />
+   </div> <div class="slide">
+    <img src="./images/placeholder12.jpg" class="image-slide" alt="" />
+   </div> <div class="slide">
+    <img src="./images/placeholder13.jpg" class="image-slide" alt="" />
+   </div> <div class="slide">
+    <img src="./images/placeholder14.jpg" class="image-slide" alt="" />
+   </div>
+   <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+   <a class="next" onclick="changeSlide(1)">&#10095;</a>
+  </div>
+ </div>
 
 
      <footer>
       <h5> Photographer Name </h5>
       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, sunt, sed aut saepe totam odio non nam praesentium impedit vel lab</p>
     </footer>
-
 
       <script src="./scripts/script.js"></script>
     </body>
