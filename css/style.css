@@ -44,14 +44,33 @@ nav {
   float: right;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 700px) {
+  nav {
+    width: 100%;
+    padding: 55px 0 15px;
+  }
+}
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+@media only screen and (max-width: 700px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
+}
 nav ul li {
   float: left;
   position: relative;
+}
+@media only screen and (max-width: 700px) {
+  nav ul li {
+    float: none;
+  }
 }
 nav ul li li {
   min-width: 190px;
@@ -69,6 +88,15 @@ nav ul li a, nav ul li a:visited {
   text-decoration: none;
   background: transparent;
 }
+@media only screen and (max-width: 700px) {
+  nav ul li a, nav ul li a:visited {
+    padding: 15px;
+    line-height: 20px;
+    background: #262626;
+    position: relative;
+    width: 100% !important;
+  }
+}
 nav ul li a:hover, nav ul li a:visited:hover {
   color: #eeeeee;
 }
@@ -83,8 +111,12 @@ nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
   z-index: 1;
   background: #fff;
 }
+@media only screen and (max-width: 700px) {
+  .navbar-dropdown {
+    position: static;
+  }
+}
 
-/* Mobile */
 .nav-mobile {
   display: none;
   position: absolute;
@@ -94,79 +126,62 @@ nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
   height: 55px;
   width: 70px;
 }
-
 @media only screen and (max-width: 700px) {
   .nav-mobile {
     display: block;
   }
-  nav {
-    width: 100%;
-    padding: 55px 0 15px;
-  }
-  nav ul {
-    display: none;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-  }
-  nav ul li {
-    float: none;
-  }
-  nav ul li a {
-    padding: 15px;
-    line-height: 20px;
-    background: #262626;
-    position: relative; /* fontos*/
-    width: 100% !important;
-  }
-  .navbar-dropdown {
-    position: static;
-  }
 }
-@media only screen and (max-width: 700px) and (min-width: 700px) {
+
+@media screen and (min-width: 700px) {
   .nav-list {
     display: block !important;
     width: 100% !important;
   }
 }
-@media only screen and (max-width: 700px) {
-  #navbar-toggle {
-    position: absolute;
-    left: 18px;
-    top: 15px;
-    cursor: pointer;
-    padding: 10px 35px 16px 0px;
-  }
-  #navbar-toggle span, #navbar-toggle span:before, #navbar-toggle span:after {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 3px;
-    width: 30px;
-    background: #ffffff;
-    position: absolute;
-    display: block;
-    content: "";
-    transition: all 300ms ease-in-out;
-  }
-  #navbar-toggle span:before {
-    top: -10px;
-  }
-  #navbar-toggle span:after {
-    bottom: -10px;
-  }
-  #navbar-toggle.active span {
-    background-color: transparent;
-  }
-  #navbar-toggle.active span:before, #navbar-toggle.active span:after {
-    top: 0;
-  }
-  #navbar-toggle.active span:before {
-    transform: rotate(45deg);
-  }
-  #navbar-toggle.active span:after {
-    transform: rotate(-45deg);
-  }
+#navbar-toggle {
+  position: absolute;
+  left: 18px;
+  top: 15px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
 }
+
+#navbar-toggle span, #navbar-toggle span:before, #navbar-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 3px;
+  width: 30px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+
+#navbar-toggle span:before {
+  top: -10px;
+}
+
+#navbar-toggle span:after {
+  bottom: -10px;
+}
+
+#navbar-toggle.active span {
+  background-color: transparent;
+}
+
+#navbar-toggle.active span:before, #navbar-toggle.active span:after {
+  top: 0;
+}
+
+#navbar-toggle.active span:before {
+  transform: rotate(45deg);
+}
+
+#navbar-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
 :root {
   --base-color: #303030;
   --light-text-color: #8A8A8A;

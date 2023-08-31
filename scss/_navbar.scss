@@ -29,15 +29,34 @@ body{
      float: right;
      text-transform: uppercase;
 
+     @media only screen and (max-width: 700px) {
+            width: 100%;
+            padding: 55px 0 15px;
+       }
+
+
 ul {
      list-style: none;
      margin: 0;
      padding: 0;
+
+
+     @media only screen and (max-width: 700px) {
+            display: none;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+       }
+
      
      li {
      float: left;
      position: relative;
 
+
+     @media only screen and (max-width: 700px) {
+            float: none;
+     }
 
      li {
         min-width: 190px;
@@ -46,11 +65,7 @@ ul {
             padding: 15px;
             line-height: 20px;
        }
-
-
-
    }
-
 
      a, a:visited {
         display: block;
@@ -60,6 +75,15 @@ ul {
         background: #262626 ;
         text-decoration: none;
         background: transparent;
+
+        @media only screen and (max-width: 700px) {
+                padding: 15px;
+                line-height: 20px;
+                background: #262626;
+                position: relative; 
+                width: 100% !important;
+           }
+
    }
    a:hover, a:visited:hover {
     color: #eeeeee;
@@ -72,17 +96,16 @@ a:not(:only-child):after, a:visited:not(:only-child):after {
 }
 }
 }
-
  
- 
-
  .navbar-dropdown {
      position: absolute;
      display: none;
      z-index: 1;
      background: #fff;
+     @media only screen and (max-width: 700px) {      
+            position: static;
+   }
 }
-/* Mobile */
 
  .nav-mobile {
      display: none;
@@ -92,37 +115,13 @@ a:not(:only-child):after, a:visited:not(:only-child):after {
      background: transparent;
      height: 55px;
      width: 70px;
-   
-}
- @media only screen and (max-width: 700px) {
-     .nav-mobile {
-         display: block;
 
-    }
-     nav {
-         width: 100%;
-         padding: 55px 0 15px;
-    }
-     nav ul {
-         display: none;
-         position: absolute;
-         width: 100%;
-         text-align: center;
-    }
-     nav ul li {
-         float: none;
-    }
-     nav ul li a {
-         padding: 15px;
-         line-height: 20px;
-         background: #262626;
-         position: relative; /* fontos*/
-         width: 100% !important;
-    }
-   
-     .navbar-dropdown {
-         position: static;
+     @media only screen and (max-width: 700px) {
+            display: block;  
 }
+ }
+
+
  @media screen and (min-width:700px) {
      .nav-list {
          display: block !important;
@@ -164,5 +163,4 @@ a:not(:only-child):after, a:visited:not(:only-child):after {
 }
  #navbar-toggle.active span:after {
      transform: rotate(-45deg);
-}
 }
