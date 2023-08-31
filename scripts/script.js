@@ -9,7 +9,6 @@
       this.classList.toggle('active');
     });
 
-
     $('nav ul li a:not(:only-child)').click(function(e) {
       $(this).siblings('.navbar-dropdown').slideToggle("slow");
 
