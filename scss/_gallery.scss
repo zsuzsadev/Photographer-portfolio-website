@@ -1,5 +1,4 @@
 /* lightbox styling */
-
 * {
   box-sizing: inherit;
 }
@@ -46,10 +45,8 @@
   @media screen and (max-width: 800px) {
     max-height: 500px;
   }  
-  
   }
 }
-
 }
 
 img.hover-shadow {
@@ -96,7 +93,6 @@ img.hover-shadow {
   @media screen and (max-width:600px) {
     font-size: 20px;
   }
-
 }
 
 .next {
@@ -143,9 +139,7 @@ img.hover-shadow {
     width: 100%;
     flex-grow: 1;
     display: flex;
-
   }
-
 }
 
 @media screen and (max-width: 800px) {

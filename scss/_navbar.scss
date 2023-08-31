@@ -13,11 +13,14 @@ body{
      float: left;
      line-height: 55px;
      font-size: 25px;
+
+     a, a:visited {
+        color: var(--light-text-color);
+        text-decoration: none;
+   }
+
 }
- .name a, .name a:visited {
-     color: var(--light-text-color);
-     text-decoration: none;
-}
+ 
  .nav-container {
      max-width: 1400px;
      margin: 0 auto;
@@ -26,45 +29,53 @@ body{
      float: right;
      text-transform: uppercase;
 
-}
- nav ul {
+ul {
      list-style: none;
      margin: 0;
      padding: 0;
-}
- nav ul li {
+     
+     li {
      float: left;
      position: relative;
-}
- nav ul li a,nav ul li a:visited {
-     display: block;
-     padding: 0 20px;
-     line-height: 55px;
-     color: var(--light-text-color);
-     background: #262626 ;
-     text-decoration: none;
-}
- nav ul li a{
-     background: transparent;
-     color: var(--light-text-color);
 
-}
- nav ul li a:hover, nav ul li a:visited:hover {
-     color: #eeeeee;
 
+     li {
+        min-width: 190px;
+        
+        a {
+            padding: 15px;
+            line-height: 20px;
+       }
+
+
+
+   }
+
+
+     a, a:visited {
+        display: block;
+        padding: 0 20px;
+        line-height: 55px;
+        color: var(--light-text-color);
+        background: #262626 ;
+        text-decoration: none;
+        background: transparent;
+   }
+   a:hover, a:visited:hover {
+    color: #eeeeee;
 }
 
- nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
-     padding-left: 4px;
-     content: ' \025BE';
+a:not(:only-child):after, a:visited:not(:only-child):after {
+    padding-left: 4px;
+    content: '';
 }
- nav ul li ul li {
-     min-width: 190px;
 }
- nav ul li ul li a {
-     padding: 15px;
-     line-height: 20px;
 }
+}
+
+ 
+ 
+
  .navbar-dropdown {
      position: absolute;
      display: none;
